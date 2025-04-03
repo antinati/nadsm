@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://media1.tenor.com/m/rSlPer86cksAAAAC/hive-alien-dance-party-hive.gif') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+        h1 {
+            font-size: 4rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+    <audio id="bg-music" autoplay loop>
+        <source src="https://www.televisiontunes.com/uploads/audio/The%20X-Files%20-%20Full.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bg-music');
+            audio.play().catch(error => console.log('Autoplay blocked:', error));
+        });
+    </script>
+</body>
+</html>
